@@ -1,3 +1,7 @@
+Quizbee 
+A simple web app using react js and designed with bootstrap  
+https://nidhipal09.github.io/Quizbee/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
