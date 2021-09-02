@@ -7,6 +7,7 @@ import { Container, Card, Button, Row, Col, Modal } from 'react-bootstrap'
 import { BsFillQuestionCircleFill } from "react-icons/bs";
 import { AiFillCheckCircle } from "react-icons/ai";
 
+
 class Quizbee extends Component {
     constructor(props) {
         super(props);
@@ -16,7 +17,7 @@ class Quizbee extends Component {
         questionBank: [],
         score: 0,
         responses: 0,
-        showModal: true
+        showModal: true,
     };
 
     setShowModal = () => {
@@ -57,12 +58,14 @@ class Quizbee extends Component {
     componentDidMount() {
         this.getQuestions();
     }
-   
-    
-    render() {
-        return (
-            <>
 
+
+
+    render() {
+
+        return (
+
+            <>
                 <Container className="mt-5 mb-5">
                     {this.state.showModal &&
                         <Card>
@@ -70,9 +73,8 @@ class Quizbee extends Component {
                                 <Card.Header>
                                     <Card.Title>
                                         <Row>
-                                            <Col xs={6}><h1> <BsFillQuestionCircleFill /> &nbsp; Quiz starts here</h1></Col>
-                                            <Col xs={4}></Col>
-                                            <Col xs={2} className="mt-2"><Button variant="outline-primary" onClick={this.playAgain}>Get new questions</Button></Col>
+                                            <Col xs={6} md={10}><h1> <BsFillQuestionCircleFill /> &nbsp; Quiz starts here</h1></Col>
+                                            <Col xs={6} md={2} className="mt-2"><Button variant="outline-primary" onClick={this.playAgain}>New questions</Button></Col>
                                         </Row>
                                     </Card.Title>
                                 </Card.Header>
@@ -111,9 +113,6 @@ class Quizbee extends Component {
                         <div className="text-center m-5">
                             <h2>Thank you for attending!  < AiFillCheckCircle /></h2>
                         </div>
-
-                        
-
                     }
                 </Container>
             </>
